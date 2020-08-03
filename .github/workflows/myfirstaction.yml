@@ -19,5 +19,5 @@ jobs:
     - name: installing surge
       run: npm install --global surge
     - name: Deploying using surge
-      run: surge ./muddasserRasool.surge.sh --token ${{secrets.SURGETOKEN}}
+      run: surge ./ muddasserRasool.surge.sh --token ${{secrets.SURGETOKEN}}
         
