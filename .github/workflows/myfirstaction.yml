@@ -1,0 +1,23 @@
+name: myfirstaction
+
+on:
+  push:
+    branches: [ master ]
+ 
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: installing Node
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: 12
+    - name: installing surge
+      run: npm install --global surge
+    - name: Deploying using surge
+      run: surge ./muddasserRasool.surge.sh --token ${{secrets.SURGETOKEN}}
+        
