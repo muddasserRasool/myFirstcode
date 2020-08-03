@@ -1,4 +1,4 @@
-name: myfirstaction
+name: myfirstcode
 
 on:
   push:
